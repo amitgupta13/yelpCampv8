@@ -26,23 +26,23 @@ const data = [
 
 function seedDB(){
     Campground.remove({}, (err)=>{
-        if(err) return console.log(err);
-            console.log('removed campgrounds');
-            data.forEach(function(seed){
-                Campground.create(seed, (err, campground)=>{
-                    if(err) return console.log(err);
-                        console.log('Added a campground');
-                        Comment.create({
-                            text:'Wawa re Tawa',
-                            author:'Chapli'
-                        }, function(err, comment){
-                            if(err) console.log(err);
-                                campground.comments.push(comment);
-                                campground.save();
-                                console.log('created new comment');
-                        });
-                });
-            });         
+        // if(err) return console.log(err);
+        //     console.log('removed campgrounds');
+        //     data.forEach(function(seed){
+        //         Campground.create(seed, (err, campground)=>{
+        //             if(err) return console.log(err);
+        //                 console.log('Added a campground');
+        //                 Comment.create({
+        //                     text:'Wawa re Tawa',
+        //                     author:'Chapli'
+        //                 }, function(err, comment){
+        //                     if(err) console.log(err);
+        //                         campground.comments.push(comment);
+        //                         campground.save();
+        //                         console.log('created new comment');
+        //                 });
+        //         });
+        //     });         
     });
 }
 
